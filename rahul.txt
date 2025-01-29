@@ -1,0 +1,23 @@
+<html>
+ <head>
+    <title>Rohit Sharma - ODI stats</title>
+ </head>
+<body style="background-color: blueviolet;">
+
+    <img width="250px" src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202402/rohit-sharma-in-action-againat-england-in-ranchi-reuters-260705999-3x4.jpg?
+      VersionId=JTpC6M.kvD1d3TztJHFoJ5oaxv_XBLoA">
+
+    <h1 style="color : white;"><u>ROHIT SHARMA </u></h1>
+    <br>
+    <p style="color: white; font-size: larger;" >
+        <b>Matches     : 265* </b> <br>
+        <i>Runs        : 10866 </i> <br>
+        Highest     : 264 (vs srilanka)  <br>
+        Average     : 49.2 <br>
+        Strike rate : 92.4 <br>
+        Hundreds    : 31 
+        <br>
+
+        <a href="https://www.espncricinfo.com/cricketers/rohit-sharma-34102"> for test and t20 stats click here </a>
+</body>
+</html>
