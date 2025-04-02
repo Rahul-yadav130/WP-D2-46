@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Conversion Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.2);
+            width: 40%;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="radio"] {
+            margin: 10px;
+        }
+
+        button {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #e68900;
+        }
+
+        h2 {
+            margin-top: 20px;
+            font-size: 22px;
+        }
+
+        #result {
+            font-weight: bold;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Conversion Tool</h1>
+        <form id="tempForm">
+            <label for="temperature">Enter Temperature:</label>
+            <input type="number" id="temperature" placeholder="Enter value" required>
+            <div>
+                <input type="radio" id="cToF" name="conversion" value="CToF" checked>
+                <label for="cToF">Celsius to Fahrenheit</label>
+                <input type="radio" id="fToC" name="conversion" value="FToC">
+                <label for="fToC">Fahrenheit to Celsius</label>
+            </div>
+            <button type="button" onclick="convertTemperature()">Convert</button>
+        </form>
+        <h2>Converted Temperature: <span id="result">-----</span></h2>
+    </div>
+
+    <script>
+        function convertTemperature() {
+            let temperature = document.getElementById("temperature").value;
+
+            
+            temperature = parseFloat(temperature);
+            if (isNaN(temperature)) {
+                alert("Please enter a valid temperature.");
+                return;
+            }
+
+            let conversionType = document.querySelector('input[name="conversion"]:checked').value;
+            let result;
+
+            if (conversionType === "CToF") {
+                result = (temperature * 9 / 5) + 32;
+            } else if (conversionType === "FToC") {
+                result = (temperature - 32) * 5 / 9;
+            }
+
+            document.getElementById("result").textContent = result.toFixed(2);
+        }
+    </script>
+</body>
+</html>
